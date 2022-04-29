@@ -1,0 +1,39 @@
+
+function Solution(arr1, arr2)
+{
+    const arr3 = arr1.concat(arr2) 
+    arr3.sort((a,b) =>{ 
+        return a-b
+    }) 
+    const n = arr3.length
+	// If length of array is even
+	console.log(arr3)
+	if (n % 2 == 0)
+	{
+	var z = n / 2;
+	var e = arr3[z-1];
+	var q = arr3[z];
+	var ans = (e + q) / 2;
+	ans = Math.floor(ans)
+	return ans;
+	}
+	
+	// If length if array is odd
+	else
+	{
+	var z = Math.floor(n / 2);
+	return arr3[z];
+	}
+}
+
+// Driver Code
+// TODO Auto-generated method stub
+var arr1 = [ -5, 3, 6, 12, 15 ];
+var arr2 = [ -12, -10, -6, -3, 4, 10 ];
+
+
+
+// calling the method
+document.write("Median = " + Solution(arr1, arr2));
+
+
