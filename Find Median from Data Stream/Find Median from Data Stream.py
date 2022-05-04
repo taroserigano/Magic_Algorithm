@@ -27,8 +27,8 @@ class MedianFinder:
         # if either size is larger? 
         if len(self.small) > len(self.large):
             # reverse it back to original 
-            val = -heapq.heappop(self.small)
-            heapq.heappush(self.large, val) 
+            val = heapq.heappop(self.small)
+            heapq.heappush(self.large, -val) 
         if len(self.large) > len(self.small): 
             val = heapq.heappop(self.large) 
             # because small needs to be MaxHeap
