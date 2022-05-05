@@ -1,0 +1,221 @@
+
+
+@TaroSerigano
+
+
+Create
+
+Upgrade
+Home
+Templates
+My Repls
+Community
+BETA
+Learn
+Teams
+Curriculum
+Blog
+About
+Careers
+Pricing
+Discord
+
+
+Search & run commands
+Ctrl
+.
+
+Repl icon
+Data Structures: Trees-traversals
+
+
+Fork repl
+
+714
+
+Hide files
+
+3
+
+110
+
+Run
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+▼
+▼
+▼
+▼
+▼
+▼
+▼
+▼
+▼
+▼
+▼
+    return traversePostOrder(this.root, []); 
+  }
+  DFTInOrder(){
+    return traverseInOrder(this.root, []);
+  } 
+}
+
+function traversePreOrder(node, list){
+  list.push(node.value);
+  if(node.left) {
+    traversePreOrder(node.left, list);
+  }
+  if(node.right) {
+    traversePreOrder(node.right, list);
+  }
+  return list;
+}
+
+function traverseInOrder(node, list){
+  if(node.left) {
+    traverseInOrder(node.left, list);
+  }
+  list.push(node.value);
+  if(node.right) {
+    traverseInOrder(node.right, list);
+  }
+  return list;
+}
+
+function traversePostOrder(node, list){
+  if(node.left) {
+    traversePostOrder(node.left, list);
+  }
+  if(node.right) {
+    traversePostOrder(node.right, list);
+  }
+  list.push(node.value);
+  return list;
+}
+
+
+const tree = new BinarySearchTree();
+tree.insert(9)
+tree.insert(4)
+tree.insert(6)
+tree.insert(20)
+tree.insert(170)
+tree.insert(15)
+tree.insert(1)
+// tree.remove(170);
+// JSON.stringify(traverse(tree.root))
+
+console.log('BFS', tree.BreadthFirstSearch());
+console.log('BFS', tree.BreadthFirstSearchR([tree.root], []))
+console.log('DFSpre', tree.DFTPreOrder());
+console.log('DFSin', tree.DFTInOrder());
+console.log('DFSpost', tree.DFTPostOrder());
+
+//     9
+//  4     20
+//1  6  15  170
+
+function traverse(node) {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : traverse(node.left);
+  tree.right = node.right === null ? null : traverse(node.right);
+  return tree;
+}
+
+
+Files
+aneagoie
+aneagoie
+Forked from aneagoie/Data Structures: Trees
+This repl has no description
+More repls
+Pokemon Ultimates 
+Pokemon Ultimates
+S1lveredPrism
+S1lveredPrism
+This game is a combination of a RPG, and a grinding game. This game was inspired by ColoredHue and HyperAlternative. You
+#
+games
++1
+3D Minecraft Clone in JS
+3D Minecraft Clone in JS
+WaterZ69
+WaterZ69
+Disclaimer: this is not meant to be a realistic replication of minecraft, I just thought it was a cool project and was worth optimizing and posting. This is a 3D clone of Minecraft made with Three.js, with voxel terrain generation. It has been optimized a little to run smoother and to generate terrains a little differently. CONTROLS: WASD = move, Q = place block, click = break block, SPACE = jump, double press W = sprint Game logic credit goes to FRADAR on cdpn Please leave a comment down below about what you think! Hope you enjoy! If this gets 2000 likes, I'll add a lot more features!
+Fly an airplane!
+Fly an airplane!
+Alpharumeric
+Alpharumeric
+You get the options to fly an airplane, its a pretty cool game, I recommend it, Its also a story
+No comments yet
+Say something about Data Structures:  Trees-traversals
+
+Data Structures: Trees-traversals - Replit
